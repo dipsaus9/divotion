@@ -1,0 +1,8 @@
+# netlify.toml
+CI = 1
+NPM_FLAGS = "--no-optional"
+[build]
+  publish = "dist"
+  
+[context.production]
+  command = "npm run production"
