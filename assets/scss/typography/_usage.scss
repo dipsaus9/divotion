@@ -8,6 +8,11 @@ p,
 a,
 li {
 	color: inherit;
+	color: color(Dark);
+	font-size: 1rem;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
 	span, a {
 		color: inherit;
 		font-family: inherit;
@@ -15,8 +20,28 @@ li {
 }
 
 h1 {
-	font-size: grid(2);
+	font-size: grid(1.5);
 	line-height: 1;
-	@include min-('font-size', 2, 24);
-	@include max-('font-size', 2, 240);
+	@include min-('font-size', 1.5, 32);
+	@include max-('font-size', 1.5, 120);
+}
+
+
+h2 {
+	font-size: grid(0.75);
+	line-height: 1.33;
+	@include min-('font-size', 0.75, 24);
+	@include max-('font-size', 0.75, 72);
+}
+
+h3 {
+	font-size: grid(0.5);
+	line-height: 1.33;
+	@include min-('font-size', 0.5, 18);
+	@include max-('font-size', 0.5, 64);
+}
+
+p.strong {
+	font-weight: 600;
+	font-size: rem(18);
 }
