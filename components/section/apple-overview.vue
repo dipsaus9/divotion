@@ -1,5 +1,6 @@
 <template>
 	<section class="apple-overview">
+		{{ apples }}
 	</section>
 </template>
 
@@ -8,3 +9,12 @@
 	margin: grid(2) auto;
 }
 </style>
+<script>
+export default {
+	computed: {
+		apples() {
+			return this.$store.getters['apples/apples']
+		}
+	}
+}
+</script>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Pink Pearl",
+    "description": "De Pink Pearl-appel is een appelvrucht met roze vruchtvlees, ontwikkeld in 1944 door Albert Etter, een teler uit Noord-Californië. Het is een zaailing van 'Surprise', een andere roze vruchtappel waarvan wordt aangenomen dat het een afstammeling is van Malus niedzwetskyana.",
+    "images": ["/pink-pearl-1"]
+  },
+  {
+    "id": 2,
+    "name": "Ambrosia",
+    "description": "Ambrosia is een appelvariëteit van oorsprong uit British Columbia begin jaren negentig. De originele boom werd voor het eerst gekweekt door de familie Mennell uit Similkameen Valley, British Columbia, die hem in hun boomgaard ontdekte.",
+    "images": ["/ambrosia-1"]
+  },
+  {
+    "id": 3,
+    "name": "Winesap",
+    "description": "Winesap is een oude appelcultivar van onbekende oorsprong, althans uit de Amerikaanse koloniale tijd. De appels zijn zoet met een pittige afdronk. Ze worden gebruikt voor eten, koken en cider.",
+    "images": ["/winesap-1"]
+  },
+  {
+    "id": 4,
+    "name": "Opal",
+    "description": "Opal® is de merknaam voor een cultivar van appel ook bekend als 'UEB32642', geproduceerd door 'Golden Delicious' te kruisen met 'Topaz'.",
+    "images": ["/opal-1"]
+  },
+  {
+    "id": 5,
+    "name": "Cortland",
+    "description": "Cortland is een cultivar van appel, die in 1898 opkwam op het New York State Agricultural Experiment Station in Genève, New York, Verenigde Staten. De appel is vernoemd naar het nabijgelegen Cortland County, New York. Het is een van de vijftien meest populaire in de Verenigde Staten.",
+    "images": ["/cortland-1"]
+  },
+  {
+    "id": 6,
+    "name": "Redlove",
+    "description": "Redlove-appels zijn een reeks van verschillende cultivars die onlangs zijn gefokt door Markus Kobelt in Zwitserland. Het zijn hybriden van kruisbestuiving van roodvlezige en korstbestendige planten. Cultivars omvatten 'Redlove Calypso', 'Redlove Circe', 'Redlove Era' en 'Redlove Odysso'.",
+    "images": ["/redlove-1"]
+  },
+  {
+    "id": 7,
+    "name": "Beacon",
+    "description": "Beacon is een koude winterharde appelvariëteit, ontwikkeld door de Universiteit van Minnesota in 1936. Het is een kruising tussen 'Wealthy'- en' Malinda'-appels. Deze appel is middelgroot met volle, dieprode strepen. Het vruchtvlees is vlezig en vrij zacht, met een mild zoete smaak.",
+    "images": ["/beacon-1"]
+  },
+  {
+    "id": 8,
+    "name": "Empire",
+    "description": "Empire is de naam van een klonaal gekweekte appelvariëteit die is afgeleid van een zaadje dat in 1945 werd geteeld door Lester C. Anderson, een voedingsdeskundige aan de Cornell University die open bestuivingsonderzoek deed naar zijn verschillende boomgaarden.",
+    "images": ["/empire-1"]
+  },
+  {
+    "id": 9,
+    "name": "Jonagored",
+    "description": "De Jonagored is een kleurmutant van het appelras Jonagold ontdekt door de Belgische boomkweker Jos Morren uit het Limburgse Halen in 1980. Hij ontdekte dit ras toevallig nadat één tak uit zijn boomgaard bijzonder fel-roodgekleurde appels droeg. Dit triploïde ras is vorstgevoelig, net als de standaard Jonagold.",
+    "images": ["/jonagored-1"]
+  },
+  {
+    "id": 10,
+    "name": "Melba",
+    "description": "Melba is een Canadese cultivar van gedomesticeerde appel, die is ontwikkeld door W.T.Macoun op de Central Experimental Farm in Ottawa, Ontario door een McIntosh te kruisen met een Liveland Raspberry-appel. Het heeft een gele huid gewassen met karmozijnrode kleur.",
+    "images": ["/melba-1"]
+  },
+  {
+    "id": 11,
+    "name": "Reinette du Canada",
+    "description": "Reinette du Canada of Canadian Reinette is, ondanks zijn naam, een oude Franse cultivar van gedomesticeerde appel. Het is een reinette-type gouden appel, met veel roodbruin, dat vorm houdt tijdens het koken en vooral voor dat doel wordt gebruikt, vooral in apfelstrudel.",
+    "images": ["/reinette-du-canada-1"]
+  },
+  {
+    "id": 12,
+    "name": "Wealthy",
+    "description": "De Wealthy is een Amerikaanse appelcultivar en was de eerste die bloeide in het klimaat van Minnesota. Tuinbouwer Peter Gideon kweekte het voor het eerst in 1868, na jaren van vallen en opstaan ​​met verschillende appelrassen. Vóór 1868 groeiden alleen krabappelen betrouwbaar in Minnesota. ",
+    "images": ["/whealthy-1"]
+  }
+]

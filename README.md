@@ -14,3 +14,7 @@ $ npm run dev
 # build for production and launch server
 $ npm run production
 ```
+
+## Deploy status
+
+![Run Linters](https://github.com/dipsaus9/divotion/workflows/Run%20Linters/badge.svg)

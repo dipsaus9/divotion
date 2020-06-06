@@ -3,15 +3,15 @@
 		<h2>
 			Apples
 		</h2>
-		<WishlistElement />
+		<WishlistTrigger />
 	</header>
 </template>
 
 <script>
-import WishlistElement from '~/components/elements/wishlist.vue'
+import WishlistTrigger from '~/components/elements/wishlist-trigger.vue'
 export default {
 	components: {
-		WishlistElement
+		WishlistTrigger
 	}
 }
 </script>

@@ -19,7 +19,6 @@
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.11.0",
-		"@nuxtjs/google-analytics": "^2.3.0",
 		"@nuxtjs/style-resources": "^1.0.0",
 		"nuxt": "^2.12.2"
 	},
@@ -31,10 +30,11 @@
 		"eslint-plugin-nuxt": "^1.0.0",
 		"eslint-plugin-only-warn": "^1.0.2",
 		"eslint-plugin-vue": "^6.2.2",
+		"stylelint": "^13.6.0",
+		"stylelint-logical-order": "0.0.8",
 		"matise-gryd": "^1.0.9",
 		"node-sass": "^4.14.1",
 		"nuxt-rfg-icon": "^0.6.4",
-		"postcss": "^7.0.32",
 		"sass-loader": "^8.0.2"
 	},
 	"browserslist": [
