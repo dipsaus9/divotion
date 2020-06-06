@@ -30,7 +30,9 @@ export const actions = {
 	syncLocal({ commit }) {
 		if (process.client && window.localStorage) {
 			const storageWishlist = localStorage.getItem(localStorageKey)
-			console.log(storageWishlist)
+			if (storageWishlist) {
+				commit('addToWishlist', storageWishlist)
+			}
 		}
 	},
 }
