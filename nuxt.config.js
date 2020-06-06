@@ -38,7 +38,7 @@ export default {
 	/*
    ** Nuxt.js modules
    */
-	modules: ['nuxt-rfg-icon', '@nuxtjs/axios', '@nuxtjs/style-resources'],
+	modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
 
 	generate: {
 		fallback: true,
