@@ -30,16 +30,16 @@ export default {
 		padding: rem(0 32);
 	}
 	&__logo {
+		display: flex;
+		align-items: center;
 		background: color(Light);
 		color: color(Dark);
 		font-size: grid(0.5);
 		line-height: 1;
-		display: flex;
-		align-items: center;
-		@include min-('font-size', 0.5, 24);
-		@include max-('font-size', 0.5, 64);
 		letter-spacing: -1px;
 		padding: grid(0.15);
+		@include min-('font-size', 0.5, 24);
+		@include max-('font-size', 0.5, 64);
 		@include min-('padding', 0.15, 10);
 	}
 }
