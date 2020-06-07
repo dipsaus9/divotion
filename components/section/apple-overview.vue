@@ -23,16 +23,16 @@ export default {
 </script>
 <style lang="scss">
 .apple-overview {
-	padding: grid(2 1);
+	padding: grid(2);
 	@media #{$small-only} {
-		padding: 3rem 2rem;
+		padding: 3rem;
 	}
 	&__list {
 		display: grid;
 		grid-column-gap: grid(1);
 		grid-row-gap: grid(1);
 		grid-template-columns: repeat(4, 1fr);
-		@media #{$xlarge-down} {
+		@media #{$xxlarge-down} {
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media #{$medium-down} {

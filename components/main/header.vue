@@ -32,9 +32,15 @@ export default {
 	&__logo {
 		background: color(Light);
 		color: color(Dark);
-		font-size: rem(32);
+		font-size: grid(0.5);
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		@include min-('font-size', 0.5, 24);
+		@include max-('font-size', 0.5, 64);
 		letter-spacing: -1px;
-		padding: rem(5 16);
+		padding: grid(0.15);
+		@include min-('padding', 0.15, 10);
 	}
 }
 </style>
