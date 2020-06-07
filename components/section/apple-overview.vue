@@ -32,7 +32,7 @@ export default {
 		grid-column-gap: grid(1);
 		grid-row-gap: grid(1);
 		grid-template-columns: repeat(4, 1fr);
-		@media #{$xxlarge-down} {
+		@media #{$xlarge-down} {
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media #{$medium-down} {

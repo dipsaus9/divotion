@@ -1,3 +1,16 @@
 // Add your variables here
 $base-transition: 0.3s;
 $bounce-ease: cubic-bezier(0, 0.75, 0.4, 1);
+
+
+@keyframes bounce {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

@@ -41,7 +41,7 @@ export default {
 	modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
 
 	generate: {
-		fallback: true,
+		fallback: true
 	},
 
 	/**
@@ -51,8 +51,8 @@ export default {
 		scss: [
 			'~/assets/scss/color/_index.scss',
 			'~/assets/scss/variables/_index.scss',
-			'@node_modules/matise-gryd/gryd-index.scss',
-		],
+			'@node_modules/matise-gryd/gryd-index.scss'
+		]
 	},
 
 	/**
@@ -70,7 +70,7 @@ export default {
 		splitChunks: {
 			layouts: true,
 			pages: true,
-			commons: true,
+			commons: true
 		},
 		/**
 		 * Minify html

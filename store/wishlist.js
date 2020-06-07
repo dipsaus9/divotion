@@ -52,12 +52,12 @@ export const actions = {
 	/**
 	* Add product to wishlist
 	* @param {Object} context - Vuex context
-	* @param {Object} product - Product object (ID, and QTY)
+	* @param {Object} product - Product object (id, name and QTY)
 	*/
 	addToWishlist({ commit, dispatch }, product) {
 		commit('addToWishlist', product)
-		dispatch('syncStoreToLocal')
 		dispatch('calculateTotals')
+		dispatch('syncStoreToLocal')
 	},
 	/**
 	 *
@@ -66,13 +66,13 @@ export const actions = {
 	 */
 	removeFromWishlist({ commit, dispatch }, id) {
 		commit('removeFromWishlist', id)
-		dispatch('syncStoreToLocal')
 		dispatch('calculateTotals')
+		dispatch('syncStoreToLocal')
 	},
 	/**
 	 * Change qty from wishlist item if set, otherwise add it
 	 * @param {Object} context - Vuex context
-	 * @param {*} product
+	 * @param {Object} product - id, name and qty
 	 */
 	changeQty({ dispatch }, product) {
 		if (!product.qty) {
@@ -82,7 +82,16 @@ export const actions = {
 		}
 	},
 	/**
-	* Sync wishlist with localstorage
+	 * Calcualte totals based on wishlist
+	 * @param {Object} context - Vuex context
+	 */
+	calculateTotals({ commit, getters }) {
+		const wishlist = getters.wishlist
+		const totals = wishlist.reduce((a, b) => a + b.qty, 0)
+		commit('setTotals', totals)
+	},
+	/**
+	* Sync wishlist from localstorage
 	* @param {Object} context - Vuex context
 	*/
 	syncLocalToStore({ commit, dispatch }) {
@@ -95,7 +104,7 @@ export const actions = {
 		}
 	},
 	/**
-	* Sync wishlist with localstorage
+	* Sync wishlist to localstorage
 	* @param {Object} context - Extract commit to access mutations
 	*/
 	syncStoreToLocal({ getters }) {
@@ -106,23 +115,14 @@ export const actions = {
 			)
 		}
 	},
-	/**
-	 * Calcualte totals based on wishlist
-	 * @param {Object} context - Vuex context
-	 */
-	calculateTotals({ commit, getters }) {
-		const wishlist = getters.wishlist
-		const totals = wishlist.reduce((a, b) => a + b.qty, 0)
-		commit('setTotals', totals)
-	}
 }
 
 export const getters = {
 	total: (state) => state.totalQuantity,
 	wishlist: (state) => state.wishlist,
 	item: (state) => (id) => state.wishlist.find((product) => product.id === id),
-	itemQuantity: (state) => (id) => {
-		const item = state.wishlist.find((product) => product.id === id)
+	itemQuantity: (state, getters) => (id) => {
+		const item = getters.item(id)
 		if (item) {
 			return item.qty
 		} else {

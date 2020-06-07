@@ -37,7 +37,7 @@
 	&__dot {
 		transform: translateX(#{grid(-1)});
 		opacity: 0;
-		animation: fade-in $base-transition 0.2s $bounce-ease forwards;
+		animation: fade-in $base-transition $bounce-ease 0.2s forwards;
 		&:nth-of-type(2) {
 			animation-delay: 0.5s;
 		}

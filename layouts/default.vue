@@ -7,7 +7,6 @@
 
 <script>
 import MainHeader from '~/components/main/header.vue'
-
 export default {
 	components: {
 		MainHeader
