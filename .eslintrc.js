@@ -2,33 +2,30 @@ module.exports = {
 	root: true,
 	env: {
 		browser: true,
-		node: true
+		node: true,
+		'jest/globals': true,
 	},
 	parserOptions: {
-		parser: 'babel-eslint'
+		parser: 'babel-eslint',
 	},
 	extends: [
 		'eslint:recommended',
 		'plugin:vue/recommended',
-		'plugin:nuxt/recommended'
+		'plugin:nuxt/recommended',
 	],
-	plugins: [
-		'only-warn'
-	],
+	plugins: ['jest', 'only-warn'],
 	// add your custom rules here
 	rules: {
-		"indent":[1,"tab"],
-		"space-before-function-paren": [1, {
-			"anonymous": "ignore",
-			"named": "ignore",
-			"asyncArrow": "ignore"
-		}],
-		"no-console": [1, { allow: ["warn", "error"] }],
-		"vue/html-indent": [1, "tab"],
-		"vue/max-attributes-per-line": [1, {
-			"singleline": 2
-		}],
-		"semi": [1, "never"],
+		'space-before-function-paren': [
+			1,
+			{
+				anonymous: 'ignore',
+				named: 'ignore',
+				asyncArrow: 'ignore',
+			},
+		],
+		'no-console': [1, { allow: ['warn', 'error'] }],
+		semi: [1, 'never'],
 		yoda: 'warn',
 		'no-trailing-spaces': 'warn',
 		'no-undef': 'warn',
@@ -37,26 +34,26 @@ module.exports = {
 			'warn',
 			'tab',
 			{
-					SwitchCase: 1, //1 tab for each Switch statement
-					VariableDeclarator: 1, //Use more variables with 1 tab
-					MemberExpression: 1, //Use 1 tab when variable with moore expressions
-					outerIIFEBody: 1,
-					FunctionDeclaration: {
-							parameters: 2,
-							body: 1
-					},
-					CallExpression: {
-							arguments: 1
-					},
-					ArrayExpression: 1, //Use 1 tab for array notation
-					ObjectExpression: 1 //Use 1 tab for object notation
-			}
+				SwitchCase: 1, //1 tab for each Switch statement
+				VariableDeclarator: 1, //Use more variables with 1 tab
+				MemberExpression: 1, //Use 1 tab when variable with moore expressions
+				outerIIFEBody: 1,
+				FunctionDeclaration: {
+					parameters: 2,
+					body: 1,
+				},
+				CallExpression: {
+					arguments: 1,
+				},
+				ArrayExpression: 1, //Use 1 tab for array notation
+				ObjectExpression: 1, //Use 1 tab for object notation
+			},
 		],
 		'newline-per-chained-call': [
-				'warn',
-				{
-						ignoreChainWithDepth: 2
-				}
+			'warn',
+			{
+				ignoreChainWithDepth: 2,
+			},
 		],
 		'no-mixed-spaces-and-tabs': 'warn',
 		//base
@@ -95,41 +92,41 @@ module.exports = {
 		//strongly
 		'vue/attribute-hyphenation': 'warn',
 		'vue/html-closing-bracket-newline': [
-				'warn',
-				{
-						singleline: 'never',
-						multiline: 'always'
-				}
+			'warn',
+			{
+				singleline: 'never',
+				multiline: 'always',
+			},
 		],
 		'vue/html-end-tags': 'warn',
 		'vue/html-indent': [
-				'warn',
-				'tab',
-				{
-						attribute: 1,
-						closeBracket: 0,
-						alignAttributesVertically: true,
-						ignores: []
-				}
+			'warn',
+			'tab',
+			{
+				attribute: 1,
+				closeBracket: 0,
+				alignAttributesVertically: true,
+				ignores: [],
+			},
 		],
 		'vue/html-self-closing': 0,
 		'vue/html-closing-bracket-spacing': [
-				'warn',
-				{
-						startTag: 'never',
-						endTag: 'never',
-						selfClosingTag: 'always'
-				}
+			'warn',
+			{
+				startTag: 'never',
+				endTag: 'never',
+				selfClosingTag: 'always',
+			},
 		],
 		'vue/max-attributes-per-line': [
-				'warn',
-				{
-						singleline: 4,
-						multiline: {
-								max: 1,
-								allowFirstLine: false
-						}
-				}
+			'warn',
+			{
+				singleline: 4,
+				multiline: {
+					max: 1,
+					allowFirstLine: false,
+				},
+			},
 		],
 		'vue/mustache-interpolation-spacing': ['warn', 'always'],
 		'vue/no-multi-spaces': 'warn',
@@ -142,7 +139,5 @@ module.exports = {
 		'vue/html-quotes': 'warn',
 		'vue/order-in-components': 'warn',
 		'vue/this-in-template': 'error',
-		'vue/attributes-order': 'warn',
-		'vue/max-attributes-per-line': 0
-	}
-};
+	},
+}

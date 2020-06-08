@@ -1,0 +1,13 @@
+on: push
+name: Test scripts
+jobs:
+  build:
+    name: Test scrips
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '13.x'
+    - run: npm install
+    - run: npm run test

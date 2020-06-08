@@ -25,7 +25,7 @@ export const actions = {
 	 * @param {Object} context - Extract dispatch function to set apples
 	 */
 	async fetchApples({ dispatch }) {
-		const apples = await import('~/data/apples.json').then((data) => data.default)
+		const apples = await import('../data/apples.json').then((data) => data.default)
 		if (apples && Array.isArray(apples)) {
 			dispatch('setApples', apples)
 		}
@@ -34,5 +34,5 @@ export const actions = {
 
 export const getters = {
 	apples: (state) => state.apples,
-	apple: (state) => (appleID) => state.apple.find((apple) => apple.id === appleID),
+	apple: (state) => (appleID) => state.apples.find((apple) => apple.id === appleID),
 }
