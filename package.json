@@ -19,7 +19,7 @@
 		"stylelint:fix": "stylelint '**/*.vue' '**/*.scss' --fix"
 	},
 	"dependencies": {
-		"@nuxtjs/axios": "^5.11.0",
+		"jsdom": "^16.2.2",
 		"loadash": "^1.0.0",
 		"nuxt": "^2.12.2"
 	},

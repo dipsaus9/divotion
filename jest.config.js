@@ -9,8 +9,6 @@ module.exports = {
 	setupFiles: ['jest-localstorage-mock'],
 	watchman: false,
 	moduleNameMapper: {
-		'^~/(.*)$': '<rootDir>/$1',
-		'^~~/(.*)$': '<rootDir>/$1',
-		'^@/(.*)$': '<rootDir>/$1',
+		'^~/(.*)$': '<rootDir>/$1'
 	}
 }
