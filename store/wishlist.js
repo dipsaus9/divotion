@@ -95,7 +95,7 @@ export const actions = {
 	* @param {Object} context - Vuex context
 	*/
 	syncLocalToStore({ commit, dispatch }) {
-		if (process.client && window.localStorage) {
+		if (window.localStorage) {
 			const storageWishlist = localStorage.getItem(localStorageKey)
 			if (storageWishlist) {
 				commit('setWishlist', JSON.parse(storageWishlist))
@@ -108,7 +108,7 @@ export const actions = {
 	* @param {Object} context - Extract commit to access mutations
 	*/
 	syncStoreToLocal({ getters }) {
-		if (process.client && window.localStorage) {
+		if (window.localStorage) {
 			localStorage.setItem(
 				localStorageKey,
 				JSON.stringify(getters.wishlist)

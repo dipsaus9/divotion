@@ -1,6 +1,5 @@
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-// import Actions from '../components/elements/test.vue'
 import { mutations, actions, getters, state } from '../store/apples'
 
 test('Test fetch apples', async () => {

@@ -25,7 +25,7 @@ export const actions = {
 	 * @param {Object} context - Extract dispatch function to set apples
 	 */
 	async fetchApples({ dispatch }) {
-		const apples = await import('../data/apples.json').then((data) => data.default)
+		const apples = await import('~/data/apples.json').then((data) => data.default)
 		if (apples && Array.isArray(apples)) {
 			dispatch('setApples', apples)
 		}
