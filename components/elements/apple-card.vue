@@ -12,27 +12,20 @@
 			</p>
 		</div>
 		<div class="apple-card__wishlist">
-			<button :value="qty ? 'Toegevoegd aan verlanglijstje' : 'Voeg toe aan verlanglijstje'" class="wishlist-widget__button" @click="!qty ? qty++ : null">
-				<span v-show="qty" class="wishlist-widget__qty">
-					{{ qty }}
-				</span>
-				<svg viewBox="0 0 100 100" class="wishlist-widget__svg" :class="{ 'wishlist-widget__svg--active' : qty }">
+			<button :value="text" class="apple-card__button" @click="!qty ? qty = 1 : qty = 0">
+				<svg viewBox="0 0 100 100" class="apple-card__svg" :class="{ 'apple-card__svg--active' : qty }">
 					<path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 				</svg>
 			</button>
-			<div v-show="qty" class="wishlist-widget__button-holder">
-				<button class="wishlist-widget__amount" @click="qty--">
-					-
-				</button>
-				<button class="wishlist-widget__amount" @click="qty++">
-					+
-				</button>
-			</div>
 		</div>
+		<WishlistWidget :id="id" class="apple-card__wishlist-widget" />
 	</article>
 </template>
 <script>
 export default {
+	components: {
+		WishlistWidget: () => import('~/components/elements/wishlist-widget.vue')
+	},
 	props: {
 		name: {
 			type: String,
@@ -52,6 +45,13 @@ export default {
 		}
 	},
 	computed: {
+		text() {
+			if (!this.qty) {
+				return 'Voeg toe aan verlanglijst'
+			} else {
+				return 'Verwijder uit verlanglijst'
+			}
+		},
 		qty: {
 			get() {
 				return this.$store.getters['wishlist/itemQuantity'](this.id)
@@ -102,10 +102,9 @@ export default {
 		top: 1rem;
 		right: 1rem;
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
 	}
-}
-
-.wishlist-widget {
 	&__button {
 		width: rem(32);
 		height: rem(32);
@@ -142,44 +141,6 @@ export default {
 			}
 		}
 	}
-
-	&__amount {
-		width: rem(32);
-		height: rem(32);
-		border: none;
-		outline: none;
-		background: transparent;
-		font-weight: 600;
-		font-size: 1.5rem;
-		cursor: pointer;
-		&:hover, &:focus {
-			animation: bounce $base-transition ease-in-out;
-		}
-	}
-
-	&__qty {
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 2;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 2rem;
-		height: 2rem;
-		font-weight: 400;
-		font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-		text-indent: 0;
-	}
-
-	&__button-holder {
-		position: absolute;
-		top: 2.5rem;
-		right: 0;
-		z-index: 2;
-		display: flex;
-	}
-
 	&__svg {
 		position: absolute;
 		top: 0;
@@ -196,6 +157,12 @@ export default {
 		&--active {
 			fill: color(Heart);
 		}
+	}
+	&__wishlist-widget {
+		position: absolute;
+		top: 2rem;
+		right: 1rem;
+		padding: 0;
 	}
 }
 </style>

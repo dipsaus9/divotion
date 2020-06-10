@@ -1,6 +1,9 @@
 <template>
 	<div class="wishlist-overview" :class="{ 'wishlist-overview--visible' : show }">
-		<WishlistCard v-for="(wish, index) of wishlist" :id="wish.id" :key="index" :name="wish.name" />
+		<WishlistCard v-for="(wish, index) of wishlist" :id="wish.id" :key="index" />
+		<p v-if="!wishlist.length" class="wishlist-overview__empty strong">
+			Verlanglijst is leeg
+		</p>
 	</div>
 </template>
 
@@ -35,6 +38,10 @@ export default {
 	transition: $base-transition $bounce-ease;
 	&--visible {
 		clip-path: inset(0 0 0 0);
+	}
+	&__empty {
+		padding: 1rem;
+		white-space: nowrap;
 	}
 }
 </style>

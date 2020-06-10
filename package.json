@@ -19,11 +19,11 @@
 		"stylelint:fix": "stylelint '**/*.vue' '**/*.scss' --fix"
 	},
 	"dependencies": {
-		"jsdom": "^16.2.2",
 		"loadash": "^1.0.0",
 		"nuxt": "^2.12.2"
 	},
 	"devDependencies": {
+		"jsdom": "^16.2.2",
 		"@babel/core": "^7.10.2",
 		"@babel/preset-env": "^7.10.2",
 		"@nuxtjs/style-resources": "^1.0.0",

@@ -1,18 +1,20 @@
 <template>
-	<div class="wishlist-card">
-		<div class="wishlist-card__content">
-			<p class="strong">
-				{{ wishlist.name }}
+	<div class="wishlist-widget">
+		<div v-show="qty" class="wishlist-widget__buttons">
+			<button class="wishlist-widget__amount wishlist-widget__amount--subtract" @click="qty--">
+				-
+			</button>
+			<p class="wishlist-widget__qty">
+				{{ qty }}
 			</p>
+			<button class="wishlist-widget__amount wishlist-widget__amount--add" @click="qty++">
+				+
+			</button>
 		</div>
-		<WishlistWidget :id="id" />
 	</div>
 </template>
 <script>
 export default {
-	components: {
-		WishlistWidget: () => import('~/components/elements/wishlist-widget.vue')
-	},
 	props: {
 		id: {
 			type: Number,
@@ -20,9 +22,6 @@ export default {
 		}
 	},
 	computed: {
-		wishlist() {
-			return this.$store.getters['wishlist/item'](this.id)
-		},
 		qty: {
 			get() {
 				return this.$store.getters['wishlist/itemQuantity'](this.id)
@@ -30,7 +29,6 @@ export default {
 			set(value) {
 				this.$store.dispatch('wishlist/changeQty', {
 					id: this.id,
-					name: this.name,
 					qty: value
 				})
 			}
@@ -39,9 +37,8 @@ export default {
 }
 </script>
 <style lang="scss">
-.wishlist-card {
+.wishlist-widget {
 	display: flex;
-	padding: 1rem 2rem;
 	&__content {
 		display: flex;
 		align-items: center;
@@ -52,12 +49,12 @@ export default {
 	&__buttons {
 		margin: 1rem 0 1rem 1rem;
 		display: flex;
+		align-items: center;
 	}
 	&__qty {
-		margin-left: rem(5);
-		&:before {
-			content: '—';
-		}
+		margin: 0 rem(5);
+		font-weight: 600;
+		font-size: 1rem;
 	}
 	&__amount {
 		width: rem(32);
@@ -66,7 +63,7 @@ export default {
 		outline: none;
 		background: transparent;
 		font-weight: 600;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		padding: 0;
 		cursor: pointer;
 		&:hover, &:focus {

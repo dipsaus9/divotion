@@ -78,7 +78,7 @@ describe('Test overview', () => {
 			localVue,
 			propsData: store.getters['apples/apple'](1)
 		})
-		const wishlistButton = appleCard.find('.wishlist-widget__button')
+		const wishlistButton = appleCard.find('.apple-card__button')
 		wishlistButton.trigger('click')
 		expect(store.getters['wishlist/wishlist'].length).toBe(1)
 		expect(store.getters['wishlist/total']).toBe(1)
