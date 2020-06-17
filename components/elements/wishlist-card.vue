@@ -22,18 +22,6 @@ export default {
 	computed: {
 		wishlist() {
 			return this.$store.getters['wishlist/item'](this.id)
-		},
-		qty: {
-			get() {
-				return this.$store.getters['wishlist/itemQuantity'](this.id)
-			},
-			set(value) {
-				this.$store.dispatch('wishlist/changeQty', {
-					id: this.id,
-					name: this.name,
-					qty: value
-				})
-			}
 		}
 	}
 }
